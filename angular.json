@@ -124,6 +124,10 @@
   },
   "defaultProject": "ShareRide",
   "cli": {
+<<<<<<< HEAD
     "analytics": "0099a5d9-1c34-4f05-bad4-7146e3ad04d2"
+=======
+    "analytics": false
+>>>>>>> 5ee22dc938d13dc83da05b8ca1aac85ae11d2ba3
   }
 }
