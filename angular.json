@@ -1,6 +1,6 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1, 
+  "version": 1,
   "newProjectRoot": "projects",
   "projects": {
     "ShareRide": {
@@ -120,6 +120,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ShareRide"
+    }
+  },
+  "defaultProject": "ShareRide",
+  "cli": {
+    "analytics": "0099a5d9-1c34-4f05-bad4-7146e3ad04d2"
+  }
 }
