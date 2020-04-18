@@ -1,0 +1,12 @@
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    background-color:  #3b8dd4;  /*#4c96d7*-BlBg*/
+    color: white;
+    font-weight: 600;
+  }  
