@@ -13,6 +13,8 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './public/login/login.component';
 import { RegistrationComponent } from './public/registration/registration.component';
 import { TopbarComponent } from './secure/topbar/topbar.component';
+import { MenubarComponent } from './secure/menubar/menubar.component';
+
 
 
 @NgModule({
@@ -20,7 +22,8 @@ import { TopbarComponent } from './secure/topbar/topbar.component';
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    TopbarComponent
+    TopbarComponent,
+    MenubarComponent
   ],
   imports: [
     BrowserModule,
