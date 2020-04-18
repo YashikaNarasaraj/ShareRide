@@ -14,6 +14,7 @@ import { LoginComponent } from './public/login/login.component';
 import { RegistrationComponent } from './public/registration/registration.component';
 import { TopbarComponent } from './secure/topbar/topbar.component';
 import { MenubarComponent } from './secure/menubar/menubar.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 
@@ -28,7 +29,8 @@ import { MenubarComponent } from './secure/menubar/menubar.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
