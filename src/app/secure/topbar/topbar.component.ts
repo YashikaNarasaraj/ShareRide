@@ -11,7 +11,7 @@ export class TopbarComponent {
     username;
  
     getUsername() {
-      this.username = 'User';
+      this.username = 'Fname Lname';
  
       return this.username;
     }

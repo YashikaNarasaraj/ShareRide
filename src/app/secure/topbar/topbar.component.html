@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg sticky-top navbar-dark bg-primary my-0 p-0"> 
+<nav class="navbar navbar-expand-lg sticky-top navbar-dark text-white bg-primary my-1 p-1"> 
     
-        <img alt="ShareRide Logo" src="assets/imgs/BlBg1.png"/>
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" routerLink="/"><img alt="ShareRide Logo" src="assets/imgs/BlBg11.png"/></a>
+        
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -14,11 +14,11 @@
               <a class="nav-link" href="#">Features</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="#">About us</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Dropdown link
+                More
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                 <a class="dropdown-item" href="#">Action</a>
@@ -28,6 +28,25 @@
             </li>
           </ul>
         </div>
+        
+
+        <span class="mr-1 connected-user"><i class="fas fa-user-circle"></i> {{ getUsername() }} </span>
+        <div class="btn-group dropleft">
+          <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <i class="fas fa-cog"></i>
+          
+          </button>
+          <div class="dropdown-menu">
+          <a class="dropdown-item connected-user-shortcut" href="#">{{ welcome }}, {{ getUsername() }}</a>
+            <div class="dropdown-divider connected-user-shortcut-divider"></div>
+             <a class="dropdown-item" href="#">Account</a>
+            <a class="dropdown-item" href="#">Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </div>
+        
+        
       
   </nav>
 
