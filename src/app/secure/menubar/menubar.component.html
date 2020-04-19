@@ -1,13 +1,33 @@
-<nav class="navbar navbar-expand navbar-light bg-info">
+<nav class="nav flex-column sidebar d-none d-sm-block bg-primary p-2">
+    <div class="sidebar-sticky">
+      <a class="nav-link text-white" href="#" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Find Rides</a>
+      <a class="nav-link text-white" href="#" routerLinkActive="active">Post Rides</a>
+      <a class="nav-link text-white" href="#" routerLinkActive="active">Request Ride</a>
+      <a class="nav-link text-white" href="#" routerLinkActive="active">Ride Requests</a>
+      </div>
+    </nav>
+    
+    <nav class="navbar navbar-expand navbar-light bg-light d-block d-sm-none fixed-top side-bar-shortcut">
+      <div class="navbar-collapse" id="navbarNav">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link text-white" href="#">Find Rides</a>
+          <a class="nav-item nav-link text-white" href="#">Post Rides</a>
+        <a class="nav-item nav-link text-white" href="#">Request Ride</a>
+          <a class="nav-item nav-link text-white" href="#">Ride Requests</a>
+      </div>
+      </div> 
+    </nav>
+    
+<!--<nav class="nav flex-column bg-light sidebar d-none d-sm-block ">
+    <div class="sidebar-sticky">
+      <a class="nav-link" (click)="goTo('/FindRide')" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Find Rides</a>
+      <a class="nav-link" (click)="goTo('/PostRide')" routerLinkActive="active">Post Rides</a>
+      <a class="nav-link" (click)="goTo('/RequestRide')" routerLinkActive="active">Request Ride</a>
+      <a class="nav-link" (click)="goTo('/Requests')" routerLinkActive="active">Ride Requests</a>
+      </div>
+    </nav>-->
 
-  
-  <div class="navbar-collapse" id="navbarNavAltMarkup">
-    <div class="navbar-nav">
-      <a class="nav-item nav-link" href="#">Available Rides</a>
-	  <a class="nav-item nav-link" href="#">Post Ride</a>
-	</div>
-  </div>  
-</nav>
+
 
 
 
