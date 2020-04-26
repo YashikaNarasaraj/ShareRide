@@ -1,4 +1,7 @@
-.img_logo{
-	width:200px;
-	height:200px;
+.bg{
+    background-image: url("/src/assets/imgs/Bgimg1.jpg");
+	width: 100%;
+	height :100%;
+    background-repeat: repeat-x;
+
 }

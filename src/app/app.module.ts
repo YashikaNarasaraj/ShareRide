@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {RouterModule, Routes} from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { CommonModule } from '@angular/common';
 
 const appRoutes: Routes = [
   { path : '', component : PublicComponent, children : [
@@ -38,6 +40,8 @@ import { SecureComponent } from './secure/secure.component';
     AppRoutingModule,
     RouterModule.forRoot(appRoutes),
     FontAwesomeModule,
+    FormsModule,
+    CommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

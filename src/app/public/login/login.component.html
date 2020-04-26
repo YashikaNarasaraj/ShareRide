@@ -1,23 +1,23 @@
 
 
- <form class="container rounded text-light bg-dark border my-5 col-lg-6">
+ <form class="bg container rounded text-light bg-dark border my-5 col-lg-6" id="login_form" (ngSubmit)="loginUser()" #f="ngForm">
  <div class="form-row my-3">
 	<div class="col">
 		<p class="h1 text-center">Login</p>
 	</div>
- </div>
+ </div> 
  
  <div class="col-lg-7" style="margin:auto;">
 	<div class="form-group">
 	<label for="email1">Email</label>
-	<input type="email" id="email1" class="form-control" placeholder="email address">
+	<input type="email" name="em" ngModel id="email1" class="form-control" placeholder="email address" aria-describedby="emailHelp" email required>
 	<small class="form-text text-warning"></small>
 	</div>
 	<div class="form-group">
 	<label for="pass">Password</label>
-	<input type="password" id="pass" class="form-control" placeholder="password">
+	<input type="password" name="pwd" ngModel id="pass" class="form-control" placeholder="password" required>
 	</div>
-	<button type="submit" routerLink ="/secure" class="btn btn-success">Submit</button>
+	<button type="submit" class="btn btn-success">Submit</button>
 <div class="col text-center mb-3">
 <a routerLink ="/registration" class="text-light">Create an account</a>
 </div>
