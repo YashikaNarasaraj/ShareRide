@@ -10,7 +10,11 @@ const appRoutes: Routes = [
   { path : '', component : LoginComponent}, 
   { path : 'registration', component : RegistrationComponent}]},
 
-  { path : 'secure', component : SecureComponent},
+  { path : 'secure', component : SecureComponent, children : [
+    {path : 'postride', component : PostrideComponent},
+    {path : 'findride', component : FindrideComponent},
+    {path : 'requestRide', component : RequestRideComponent},
+    {path : 'rideRequests', component : RideRequestsComponent}]}
 ]
 
 import { AppRoutingModule } from './app-routing.module';
@@ -22,6 +26,10 @@ import { MenubarComponent } from './secure/menubar/menubar.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { PublicComponent } from './public/public.component';
 import { SecureComponent } from './secure/secure.component';
+import { PostrideComponent } from './secure/postride/postride.component';
+import { FindrideComponent } from './secure/findride/findride.component';
+import { RequestRideComponent } from './secure/request-ride/request-ride.component';
+import { RideRequestsComponent } from './secure/ride-requests/ride-requests.component';
 
 
 
@@ -33,7 +41,11 @@ import { SecureComponent } from './secure/secure.component';
     TopbarComponent,
     MenubarComponent,
     PublicComponent,
-    SecureComponent
+    SecureComponent,
+    PostrideComponent,
+    FindrideComponent,
+    RequestRideComponent,
+    RideRequestsComponent
   ],
   imports: [
     BrowserModule,

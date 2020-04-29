@@ -1,19 +1,19 @@
 <nav class="nav flex-column sidebar border d-none d-sm-block bg-primary">
     <div class="sidebar-sticky">
-      <a class="nav-link text-white border ml-2" href="#" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Find Rides</a>
-      <a class="nav-link text-white border ml-2" href="#" routerLinkActive="active">Post Rides</a>
-      <a class="nav-link text-white border ml-2" href="#" routerLinkActive="active">Request Ride</a>
-      <a class="nav-link text-white border ml-2" href="#" routerLinkActive="active">Ride Requests</a>
+      <a class="nav-link text-white border ml-2" routerLink="/secure/findride" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Find Rides</a>
+      <a class="nav-link text-white border ml-2" routerLink="/secure/postride" routerLinkActive="active">Post Rides</a>
+      <a class="nav-link text-white border ml-2" routerLink="/secure/requestRide" routerLinkActive="active">Request Ride</a>
+      <a class="nav-link text-white border ml-2" routerLink="/secure/rideRequests" routerLinkActive="active">Ride Requests</a>
       </div>
     </nav>
     
     <nav class="navbar navbar-expand navbar-light bg-light d-block d-sm-none fixed-top side-bar-shortcut">
       <div class="navbar-collapse" id="navbarNav">
         <div class="navbar-nav">
-          <a class="nav-item nav-link text-white" href="#">Find Rides</a>
-          <a class="nav-item nav-link text-white" href="#">Post Rides</a>
-        <a class="nav-item nav-link text-white" href="#">Request Ride</a>
-          <a class="nav-item nav-link text-white" href="#">Ride Requests</a>
+          <a class="nav-item nav-link text-white" routerLink="/secure/findride">Find Rides</a>
+          <a class="nav-item nav-link text-white" routerLink="/secure/postride">Post Rides</a>
+        <a class="nav-item nav-link text-white" routerLink="/secure/requestRide">Request Ride</a>
+          <a class="nav-item nav-link text-white" routerLink="/secure/rideRequests">Ride Requests</a>
       </div>
       </div> 
     </nav>

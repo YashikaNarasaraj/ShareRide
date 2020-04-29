@@ -60,17 +60,5 @@ export class RegistrationComponent implements OnInit{
 
     return this.isValid;
   }
-
-  isMatched(){
-    if( (this.registrationForm.controls.conf_pwd.errors == null) &&
-      (this.registrationForm.value.pwd == this.registrationForm.value.conf_pwd)){
-        this.isValid = false;
-      }
-      else{
-        this.isValid = true;
-      }
-      return this.isValid;
-    }
-
   
 }
