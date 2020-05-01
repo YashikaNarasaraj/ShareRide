@@ -11,6 +11,7 @@ const appRoutes: Routes = [
   { path : 'registration', component : RegistrationComponent}]},
 
   { path : 'secure', component : SecureComponent, children : [
+    {path : '', component : HomeComponent},
     {path : 'postride', component : PostrideComponent},
     {path : 'findride', component : FindrideComponent},
     {path : 'requestRide', component : RequestRideComponent},
@@ -30,6 +31,7 @@ import { PostrideComponent } from './secure/postride/postride.component';
 import { FindrideComponent } from './secure/findride/findride.component';
 import { RequestRideComponent } from './secure/request-ride/request-ride.component';
 import { RideRequestsComponent } from './secure/ride-requests/ride-requests.component';
+import { HomeComponent } from './secure/topbar/home/home.component';
 
 
 
@@ -45,7 +47,8 @@ import { RideRequestsComponent } from './secure/ride-requests/ride-requests.comp
     PostrideComponent,
     FindrideComponent,
     RequestRideComponent,
-    RideRequestsComponent
+    RideRequestsComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
