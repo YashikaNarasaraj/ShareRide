@@ -32,6 +32,7 @@ import { FindrideComponent } from './secure/findride/findride.component';
 import { RequestRideComponent } from './secure/request-ride/request-ride.component';
 import { RideRequestsComponent } from './secure/ride-requests/ride-requests.component';
 import { HomeComponent } from './secure/topbar/home/home.component';
+import { AboutUsComponent } from './about-us/about-us.component';
 
 
 
@@ -48,7 +49,8 @@ import { HomeComponent } from './secure/topbar/home/home.component';
     FindrideComponent,
     RequestRideComponent,
     RideRequestsComponent,
-    HomeComponent
+    HomeComponent,
+    AboutUsComponent
   ],
   imports: [
     BrowserModule,
