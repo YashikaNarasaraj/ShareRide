@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: '.app-topbar',
@@ -8,7 +11,10 @@ import { Component } from '@angular/core';
 export class TopbarComponent {
 
     welcome = 'Welcome';
-    username;
+    username : string;
+    faCog = faCog;
+    faCoffee = faCoffee;
+    faUser = faUserCircle;
  
     getUsername() {
       this.username = 'Fname Lname';

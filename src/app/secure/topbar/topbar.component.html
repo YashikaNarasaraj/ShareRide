@@ -30,10 +30,12 @@
         </div>
         
 
-        <span class="mr-1 connected-user"><i class="fas fa-user-circle"></i> {{ getUsername() }} </span>
+        <span class="mr-1 connected-user"> <fa-icon [icon]="faUser"></fa-icon>
+          <!--<i class="fas fa-user-circle"></i>--> {{ getUsername() }} </span>
         <div class="btn-group dropleft">
           <button type="button" class="btn btn-light btn-sm dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-cog"></i>
+          <!--<i class="fas fa-cog"></i>-->
+          <fa-icon [icon]="faCog"></fa-icon>
           
           </button>
           <div class="dropdown-menu">
