@@ -1,3 +1,37 @@
-<div class="container-fluid m-2">
-    <span class="badge badge-pill badge-primary ">Itinerary</span>
-</div>
+<form class="my-2 mx-3" >
+	<fieldset class="border-primary p-3 brdr m-3 w-100">
+    <legend class="shadow w-100 p-2 my-3 bg-white brdr1 h4">Itinerary</legend>
+		<input type="text" class="brdr shadow p-1 m-1" name="Pick_up" placeholder="Pick-up point">
+		<br>
+		<br>
+		<input type="text" class="brdr shadow p-1 m-1" name="Pick_up" placeholder="Drop point">
+	</fieldset>
+	
+  <fieldset class="border-primary p-3 brdr m-3 w-100">
+    <legend class="shadow w-50 p-2 my-3 bg-white brdr1 h4">Car Information:</legend>
+    <label for="model">Car Model : </label>
+    <input type="text" class="brdr shadow pl-4" id="model" name="model"><br><br>
+    <label for="car_num">Car Number :</label>
+    <input type="text" class="brdr shadow pl-4" id="car_num" name="car_num"><br><br>
+	<label for="price">Price for trip : </label>
+	<select class="brdr ml-2"><option>CAD</option><option>USD</option><option>INR</option><option>Euro</option></select>
+	<input type="number" class="brdr shadow pl-4 ml-2" id="price" name="price"><br><br>
+	<label for="car_num">Seats available:</label>
+    <input type="number" class="brdr shadow pl-4" id="car_num" name="car_num"><br><br>
+  </fieldset>
+  
+  <fieldset class="border-primary p-3 brdr m-3 w-100">
+    <legend class="shadow w-100 p-2 my-3 bg-white brdr1 h4">Personal Information:</legend>
+    <label for="name">Name : </label>
+    <input type="text" class="brdr shadow pl-4" id="name" name="name"><br><br>
+    <label for="ph_num">Phone Number : </label>
+    <input type="text" class="brdr shadow pl-4" id="ph_num" name="ph_num"><br><br>
+    <label for="email">Email : </label>
+    <input type="email" class="brdr shadow pl-4" id="email" name="email"><br><br>
+    <label for="birthday">Date of Birth : </label>
+    <input type="date" class="brdr shadow pl-4" id="birthday" name="birthday"><br><br>
+	<label for="exp">Driving experience : </label>
+    <input type="number" class="brdr shadow pl-4" id="exp" name="exp"><br><br>
+  </fieldset>
+  <input class="bg-primary btn btn-primary brdr2 mx-5 my-3 brdr2 px-3 py-1" type="submit" value="Submit">
+</form>
