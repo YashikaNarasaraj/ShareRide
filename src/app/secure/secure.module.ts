@@ -10,11 +10,14 @@ const appRoutes: Routes = [
     { path : '', component : SecureComponent, children : [
         { path : '', component : AboutUsComponent}, 
         {path : 'postride', component : PostrideComponent},
-        {path : 'findride', component : FindrideComponent},
         {path : 'requestRide', component : RequestRideComponent},
-        {path : 'rideRequests', component : RideRequestsComponent},
         {path : 'AboutUs', component : AboutUsComponent},
-        {path : 'profile', component : ProfileComponent}]}
+        {path : 'profile', component : ProfileComponent},
+        {path : 'trips', component : TripsComponent, children :[
+          {path : '', component : FindrideComponent},
+          {path : 'rideRequests', component : RideRequestsComponent}
+        ]}
+    ]}
 ]
 
 
@@ -22,12 +25,13 @@ import { SecureComponent } from './secure.component';
 import { TopbarComponent } from './topbar/topbar.component';
 import { MenubarComponent } from './menubar/menubar.component';
 import { PostrideComponent } from './postride/postride.component';
-import { FindrideComponent } from './findride/findride.component';
+import { FindrideComponent } from './trips/findride/findride.component';
 import { RequestRideComponent } from './request-ride/request-ride.component';
-import { RideRequestsComponent } from './ride-requests/ride-requests.component';
+import { RideRequestsComponent } from './trips/ride-requests/ride-requests.component';
 import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ProfileComponent } from './profile/profile.component';
+import { TripsComponent } from './trips/trips.component';
 
 
 
@@ -43,6 +47,7 @@ import { ProfileComponent } from './profile/profile.component';
     RideRequestsComponent,
     AboutUsComponent,
     ProfileComponent,
+    TripsComponent
   ],
   imports: [
     RouterModule.forChild(appRoutes),
