@@ -7,28 +7,33 @@ import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 const appRoutes: Routes = [
-  { path : '', loadChildren : () => import('./public/public.module').then((m) => m.PublicModule) },
-  { path : 'secure', loadChildren :() => import('./secure/secure.module').then((m) => m.SecureModule)}
+  { path : '', component : PublicComponent, children : [
+  { path : '', component : LoginComponent}, 
+  { path : 'registration', component : RegistrationComponent}]}
 ]
 
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+
+import { PublicComponent } from './public.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
+
 
 
 @NgModule({
   declarations: [
-    AppComponent,
-   ],
+    PublicComponent,
+    LoginComponent,
+    RegistrationComponent
+  ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    RouterModule.forRoot(appRoutes),
+    RouterModule.forChild(appRoutes),
     FontAwesomeModule,
     FormsModule,
     CommonModule,
     ReactiveFormsModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [PublicComponent]
 })
-export class AppModule { }
+export class PublicModule { }
