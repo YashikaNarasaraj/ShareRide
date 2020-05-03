@@ -18,3 +18,8 @@
       left : 30%;
   }
       
+  .brdr3{
+    border-radius : 10px;
+    left : 50%;
+    border: 1px solid;
+}
