@@ -17,7 +17,7 @@ export class TopbarComponent {
     faUser = faUserCircle;
  
     getUsername() {
-      this.username = 'Fname Lname';
+      this.username = 'Yashika Narasaraj';
  
       return this.username;
     }
