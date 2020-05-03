@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {RouterModule, Routes} from '@angular/router';
@@ -44,7 +43,6 @@ import { FeaturesComponent } from './features/features.component';
     FeaturesComponent
   ],
   imports: [
-    BrowserModule,
     RouterModule.forChild(appRoutes),
     FontAwesomeModule,
     FormsModule,

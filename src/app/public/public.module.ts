@@ -1,4 +1,3 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import {RouterModule, Routes} from '@angular/router';
@@ -26,7 +25,6 @@ import { RegistrationComponent } from './registration/registration.component';
     RegistrationComponent
   ],
   imports: [
-    BrowserModule,
     RouterModule.forChild(appRoutes),
     FontAwesomeModule,
     FormsModule,
