@@ -16,7 +16,8 @@ const appRoutes: Routes = [
         {path : 'profile', component : ProfileComponent},
         {path : 'trips', component : TripsComponent, children :[
           {path : '', component : FindrideComponent},
-          {path : 'rideRequests', component : RideRequestsComponent}
+          {path : 'rideRequests', component : RideRequestsComponent},
+          {path : 'driverdetails/:id', component : DriverDetailsComponent}
         ]}
     ]}
 ]
@@ -35,6 +36,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { TripsComponent } from './trips/trips.component';
 import { FindItemComponent } from './trips/findride/find-item/find-item.component';
 import { RequestItemComponent } from './trips/ride-requests/request-item/request-item.component';
+import { DriverDetailsComponent } from './trips/driver-details/driver-details.component';
 
 
 
@@ -52,7 +54,8 @@ import { RequestItemComponent } from './trips/ride-requests/request-item/request
     ProfileComponent,
     TripsComponent,
     FindItemComponent,
-    RequestItemComponent
+    RequestItemComponent,
+    DriverDetailsComponent
   ],
   imports: [
     RouterModule.forChild(appRoutes),

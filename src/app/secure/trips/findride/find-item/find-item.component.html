@@ -9,29 +9,29 @@
         <button class="btn btn-primary px-2 py-1 mt-2 ml-4 float-right"
         [disabled]="checkAvailability() && route.seats == 0"
        (click)="book($event)">Book a seat</button>
-        <button class="btn btn-outline-primary px-2 py-1 mt-2 float-right" data-toggle="modal" data-target="#DriverInfo">show details</button>     
+        <button class="btn btn-outline-primary px-2 py-1 mt-2 float-right" [routerLink]="['/secure/trips/driverdetails/', route.id]" data-toggle="modal" data-target="#DriverInfo">show details</button>     
     </div>
 </li>
 
-<div class="modal fade" id="DriverInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<!--<div class="modal fade" id="DriverInfo" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog brdr" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title text-primary text-center" id="exampleModalLabel">{{route.name}}</h4>
+          <h4 class="modal-title text-primary mx-auto" id="exampleModalLabel">Would you like to contact driver?</h4>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          ...
-        </div>
+       
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+          <button type="button" class="btn btn-primary" [routerLink]="['/secure/trips/driverdetails/', route.id]">Yes, I need more details</button>
         </div>
       </div>
     </div>
-  </div>
+  </div>-->
+
+
   
 
 
