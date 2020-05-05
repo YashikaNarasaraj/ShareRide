@@ -4,6 +4,7 @@ import {RouterModule, Routes} from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { RidesService } from './services/rides.service';
 
 
 const appRoutes: Routes = [
@@ -32,6 +33,8 @@ import { HomeComponent } from './home/home.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ProfileComponent } from './profile/profile.component';
 import { TripsComponent } from './trips/trips.component';
+import { FindItemComponent } from './trips/findride/find-item/find-item.component';
+import { RequestItemComponent } from './trips/ride-requests/request-item/request-item.component';
 
 
 
@@ -47,7 +50,9 @@ import { TripsComponent } from './trips/trips.component';
     RideRequestsComponent,
     AboutUsComponent,
     ProfileComponent,
-    TripsComponent
+    TripsComponent,
+    FindItemComponent,
+    RequestItemComponent
   ],
   imports: [
     RouterModule.forChild(appRoutes),
@@ -56,6 +61,6 @@ import { TripsComponent } from './trips/trips.component';
     CommonModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [RidesService],
 })
 export class SecureModule { }

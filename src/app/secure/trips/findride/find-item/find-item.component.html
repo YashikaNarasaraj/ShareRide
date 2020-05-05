@@ -1,0 +1,43 @@
+<li class="media" *ngIf="route.seats; else noRides">
+    <img src={{route.img}} class="mr-3 brdr1" width="180" height="120" alt="Car picture">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{route.name}} <span class="float-right h6">Seats available : {{route.seats}}</span></h5>
+      <span class="float-right text-warning"><fa-icon [icon]="faStar"></fa-icon><b class="text-dark ml-2">{{route.rating}}</b></span>
+      <span><b>Fare : {{route.price}}</b><br>
+        <b>Date :</b> {{route.date}} <br>
+        <b>Time :</b> {{route.Time}}</span>
+        <button class="btn btn-primary px-2 py-1 mt-2 ml-4 float-right"
+        [disabled]="checkAvailability() && route.seats == 0"
+       (click)="book($event)">Book a seat</button>
+        <button class="btn btn-outline-primary px-2 py-1 mt-2 float-right" data-toggle="modal" data-target="#DriverInfo">show details</button>     
+    </div>
+</li>
+
+<div class="modal fade" id="DriverInfo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-primary text-center" id="exampleModalLabel">{{route.name}}</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+
+  <ng-template #noRides>
+    <p>This ride is no more available</p>
+  </ng-template>
+
+
+  

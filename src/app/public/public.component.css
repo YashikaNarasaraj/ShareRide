@@ -1,6 +1,6 @@
 .bg {
     /* The image used */
-    background-image: url('/src/assets/imgs/Bgimg1.jpg');
+    background-image: url('/src/assets/imgs/Bgimg1.jpg') no-repeat center center fixed;
   
   
     /* Full height */
@@ -8,8 +8,7 @@
     width:100%;
     
   
-    /* Center and scale the image nicely 
+    /* Center and scale the image nicely */
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;*/
+    background-size: cover;
   }
