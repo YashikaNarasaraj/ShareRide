@@ -9,7 +9,7 @@
         <button class="btn btn-primary px-2 py-1 mt-2 ml-4 float-right"
         [disabled]="checkAvailability() && route.seats == 0"
        (click)="book($event)">Book a seat</button>
-        <button class="btn btn-outline-primary px-2 py-1 mt-2 float-right" [routerLink]="['/secure/trips/driverdetails/', route.id]" data-toggle="modal" data-target="#DriverInfo">show details</button>     
+        <button class="btn btn-outline-primary px-2 py-1 mt-2 float-right"  [routerLink]="['/secure/trips/driverdetails/', route.id]" data-toggle="modal" data-target="#DriverInfo">show details</button>     
     </div>
 </li>
 
@@ -25,7 +25,7 @@
        
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" [routerLink]="['/secure/trips/driverdetails/', route.id]">Yes, I need more details</button>
+          <button type="button" class="btn btn-primary">Yes, I need more details</button>
         </div>
       </div>
     </div>

@@ -1,1 +1,43 @@
-<p>request-item works!</p>
+<li class="media" *ngIf="request.seats; else noRequest">
+    <img src={{request.img}} class="mr-3 brdr1" width="115" height="120" alt="Car picture">
+    <div class="media-body">
+      <h5 class="mt-0 mb-1">{{request.name}} <span class="float-right h6">Seats required : {{request.seats}}</span></h5>
+      
+      <span><b>Desired fare : {{request.price}}</b><br>
+        <b>Date :</b> {{request.date}} <br>
+        <b>Time :</b> {{request.Time}}</span>
+        <!--<button class="btn btn-primary px-2 py-1 mt-2 ml-4 float-right"
+        [disabled]="checkAvailability() && request.seats == 0"
+       (click)="book($event)">Book a seat</button>-->
+        <button class="btn btn-outline-primary px-2 py-1 mt-2 float-right"  [routerLink]="['/secure/trips/passengerdetails/', request.id]" data-toggle="modal" data-target="#DriverInfo">Contact Passenger</button>     
+    </div>
+</li>
+
+<!--<div class="modal fade" id="DriverInfo" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog brdr" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title text-primary mx-auto" id="exampleModalLabel">Would you like to contact driver?</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+       
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Yes, I need more details</button>
+        </div>
+      </div>
+    </div>
+  </div>-->
+
+
+  
+
+
+  <ng-template #noRequest>
+    <p>This request is no more available</p>
+  </ng-template>
+
+
+  

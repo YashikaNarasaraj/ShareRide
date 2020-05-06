@@ -1,1 +1,61 @@
-<p>ride-requests works!</p>
+<select [(ngModel)]="requestService.requests_serv" name="routes" class="shadow text-primary w-25 p-1 d-flex justify-content-center my-5 bg-white brdr1 h4">
+    <option value="mon_tor">Montreal - Toronto</option>
+    <option value="mon_hal">Montreal - Halifax</option>
+    <option value="mon_bra">Montreal - Brampton</option>
+  </select>
+  
+  
+      <!--<div class="border brdr border-primary p-3">
+      <li class="media">
+        <img src="../../../../assets/cars/car2.jpg" class="mr-3 brdr1" width="180" height="120" alt="Car picture">
+        <div class="media-body">
+          <h5 class="mt-0 mb-1">Praveen Kumar <span class="float-right h6">Seats available : 4</span></h5>
+          <span class="float-right text-warning"><fa-icon [icon]="faStar"></fa-icon><b class="text-dark ml-2">rating</b></span>
+          <span><b>Fare : 40 $</b><br> <i class="fas fa-dollar-sign"></i> <fa-icon [icon]="faDollar" class="mx-1"></fa-icon>
+            <b>Date :</b> 10/May/2020 <br>
+            <b>Time :</b> 10 AM</span>
+            <button class="btn btn-primary p-1 mt-2 ml-4 float-right">Book a seat</button>
+            <button class="btn btn-outline-primary p-1 mt-2 float-right">show details</button>     
+        </div>
+      </li>
+      </div>-->
+      
+  <div class="container w-75 m-3" [ngSwitch]="requestService.requests_serv">
+        <ng-container *ngSwitchCase="'mon_hal'">
+        <ul *ngFor="let i of mont_hali" class="border brdr border-primary p-3">
+            <app-request-item [request]="i"></app-request-item>
+        </ul>
+    </ng-container>
+  
+        <ng-container *ngSwitchCase="'mon_bra'">
+        <ul *ngFor="let x of mont_bram" class="border brdr border-primary p-3">
+            <app-request-item [request]="x"></app-request-item>
+        </ul>
+    </ng-container>
+  
+        <ng-container *ngSwitchDefault>
+        <ul *ngFor="let y of mont_toro; let i=index" class="border brdr border-primary p-3">
+            <app-request-item [request]="y" ></app-request-item>
+        </ul>
+    </ng-container>
+    </div>    
+  
+    
+  
+  <!--<li ng-repeat="Star in [1,2,3,4,5]">
+    <div ng-switch="store.Rating >= Star">
+        <div ng-switch-when="true">
+            <img src="~/Images/star.png" class="star" />
+        </div>
+        <div ng-switch-when="false">
+            <div ng-switch="store.Rating > (Star-1)">
+                <div ng-switch-when="true">
+                    <img src="~/Images/star_half.png" class="star" />
+                </div>
+                <div ng-switch-when="false">
+                    <img src="~/Images/star_gray.png" class="star" />
+                </div>
+            </div>
+        </div>
+    </div>
+  </li>-->

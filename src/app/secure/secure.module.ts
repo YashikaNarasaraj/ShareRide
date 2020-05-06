@@ -5,6 +5,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { RidesService } from './services/rides.service';
+import { RequestsService } from './services/requests.service';
 
 
 const appRoutes: Routes = [
@@ -17,7 +18,8 @@ const appRoutes: Routes = [
         {path : 'trips', component : TripsComponent, children :[
           {path : '', component : FindrideComponent},
           {path : 'rideRequests', component : RideRequestsComponent},
-          {path : 'driverdetails/:id', component : DriverDetailsComponent}
+          {path : 'driverdetails/:id', component : DriverDetailsComponent},
+          {path : 'passengerdetails/:id', component : PassengerDetailsComponent}
         ]}
     ]}
 ]
@@ -37,6 +39,7 @@ import { TripsComponent } from './trips/trips.component';
 import { FindItemComponent } from './trips/findride/find-item/find-item.component';
 import { RequestItemComponent } from './trips/ride-requests/request-item/request-item.component';
 import { DriverDetailsComponent } from './trips/driver-details/driver-details.component';
+import { PassengerDetailsComponent } from './trips/passenger-details/passenger-details.component';
 
 
 
@@ -55,7 +58,8 @@ import { DriverDetailsComponent } from './trips/driver-details/driver-details.co
     TripsComponent,
     FindItemComponent,
     RequestItemComponent,
-    DriverDetailsComponent
+    DriverDetailsComponent,
+    PassengerDetailsComponent
   ],
   imports: [
     RouterModule.forChild(appRoutes),
@@ -64,6 +68,6 @@ import { DriverDetailsComponent } from './trips/driver-details/driver-details.co
     CommonModule,
     ReactiveFormsModule
   ],
-  providers: [RidesService],
+  providers: [RidesService, RequestsService],
 })
 export class SecureModule { }
