@@ -7,7 +7,12 @@ import { RidesService } from '../services/rides.service';
   styleUrls: ['./postride.component.css']
 })
 export class PostrideComponent implements OnInit {
+  
+  submit_val : boolean = false;
 
+  status(){
+    this.submit_val=true;
+  }
   constructor(public rideService : RidesService){
 
   }

@@ -11,10 +11,12 @@ export class RidesService{
   public serv_exp : any;
   public serv_price : any;
   public serv_seats : any;
-  public serv_rating : any;
+  public serv_rating = 5;
   public serv_date : any;
   public serv_time : any;
   public serv_phone : any;
+  public serv_email : any;
+  public serv_dob : any;
   
   public mon_tor = [{id : 1, name: 'Praveen Kumar', age: 23 , gender : "male", source: "Montreal", Destination : "Toronto", CarModel : "BMW", CarNum : "SN 45 RTS", exp : 4, price: '40 $', seats: 4, img : "assets/cars/car11.jpg", rating : 5, date : "10/May/2020", Time : "5 PM", Phone : "+1 438-364-4455" },
   {id : 2, name: 'Yashika Narasaraj', age: 25 , gender : "female", source: "Montreal", Destination : "Toronto", CarModel : "Chevrolet Corvette", CarNum : "SN 65 CTV", exp : 6, price: '45 $', seats: 4, img : "assets/cars/car5.jpg", rating : 5, date : "15/May/2020", Time : "10 AM", Phone : "+1 438-364-4455" },

@@ -19,7 +19,8 @@ const appRoutes: Routes = [
           {path : '', component : FindrideComponent},
           {path : 'rideRequests', component : RideRequestsComponent},
           {path : 'driverdetails/:id', component : DriverDetailsComponent},
-          {path : 'passengerdetails/:id', component : PassengerDetailsComponent}
+          {path : 'passengerdetails/:id', component : PassengerDetailsComponent},
+          {path: 'new-item', component : NewItemComponent}
         ]}
     ]}
 ]
@@ -40,6 +41,7 @@ import { FindItemComponent } from './trips/findride/find-item/find-item.componen
 import { RequestItemComponent } from './trips/ride-requests/request-item/request-item.component';
 import { DriverDetailsComponent } from './trips/driver-details/driver-details.component';
 import { PassengerDetailsComponent } from './trips/passenger-details/passenger-details.component';
+import { NewItemComponent } from './trips/findride/new-item/new-item.component';
 
 
 
@@ -59,7 +61,8 @@ import { PassengerDetailsComponent } from './trips/passenger-details/passenger-d
     FindItemComponent,
     RequestItemComponent,
     DriverDetailsComponent,
-    PassengerDetailsComponent
+    PassengerDetailsComponent,
+    NewItemComponent
   ],
   imports: [
     RouterModule.forChild(appRoutes),
