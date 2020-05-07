@@ -1,5 +1,21 @@
 export class RidesService{
-    
+
+  public serv_id : any;
+  public serv_name : any;
+  public serv_age : any;
+  public serv_gender : any;
+  public serv_source : any;
+  public serv_destination : any;
+  public serv_carModel : any;
+  public serv_carNum : any;
+  public serv_exp : any;
+  public serv_price : any;
+  public serv_seats : any;
+  public serv_rating : any;
+  public serv_date : any;
+  public serv_time : any;
+  public serv_phone : any;
+  
   public mon_tor = [{id : 1, name: 'Praveen Kumar', age: 23 , gender : "male", source: "Montreal", Destination : "Toronto", CarModel : "BMW", CarNum : "SN 45 RTS", exp : 4, price: '40 $', seats: 4, img : "assets/cars/car11.jpg", rating : 5, date : "10/May/2020", Time : "5 PM", Phone : "+1 438-364-4455" },
   {id : 2, name: 'Yashika Narasaraj', age: 25 , gender : "female", source: "Montreal", Destination : "Toronto", CarModel : "Chevrolet Corvette", CarNum : "SN 65 CTV", exp : 6, price: '45 $', seats: 4, img : "assets/cars/car5.jpg", rating : 5, date : "15/May/2020", Time : "10 AM", Phone : "+1 438-364-4455" },
   {id : 3, name: 'Shashidhar Reddy', age: 23 , gender : "male", source: "Montreal", Destination : "Toronto", CarModel : "Maecedes Benz", CarNum : "MN4550", exp : 4, price: '30 $', seats: 4, img : "assets/cars/car.jpeg", rating : 5, date : "12/May/2020", Time : "2 PM", Phone : "+1 438-364-4455" },

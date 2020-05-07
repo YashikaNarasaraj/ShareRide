@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RidesService } from '../services/rides.service';
 
 @Component({
   selector: 'app-postride',
@@ -7,8 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PostrideComponent implements OnInit {
 
-  constructor() { }
+  constructor(public rideService : RidesService){
 
+  }
   ngOnInit(): void {
   }
 
