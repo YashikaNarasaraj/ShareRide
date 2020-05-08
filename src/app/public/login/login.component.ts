@@ -10,9 +10,13 @@ import { NgForm } from '@angular/forms';
 export class LoginComponent {
 
   @ViewChild('f') frm : NgForm;
-  constructor(private router : Router){}
+  constructor(private router : Router){
+    console.log(this.frm);
+  }
 
+ 
   loginUser(){
+    
     if(this.frm.value.em=="user@gmail.com" && this.frm.value.pwd=="pwd"){
       this.router.navigate(['/secure']);
     }else{

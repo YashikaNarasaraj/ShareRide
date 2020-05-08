@@ -1,6 +1,6 @@
 
 <div class="bg">
- <form class="container rounded text-light bg-dark border my-5 col-lg-6 login_box" id="login_form" (ngSubmit)="loginUser()" #f="ngForm">
+<form class="container rounded text-light bg-dark border my-5 col-lg-6 login_box" id="login_form" (ngSubmit)="loginUser()" #f="ngForm">
  <div class="form-row my-3">
 	<div class="col">
 		<p class="h1 text-center">Login</p>
@@ -15,9 +15,10 @@
 	</div>
 	<div class="form-group">
 	<label for="pass">Password</label>
-	<input type="password" name="pwd" ngModel id="pass" class="form-control" placeholder="password" required>
+	<input type="password" name="pwd" ngModel #pass="ngModel" id="pass" class="form-control" placeholder="password" required>
+	<small id="emailHelp" class="form-text text-warning" *ngIf="pass.invalid && pass.touched">The password is mandatory</small>
 	</div>
-	<button type="submit" class="btn btn-success">Submit</button>
+	<button type="submit" class="btn btn-success" [disabled]="!f.valid">Submit</button>
 <div class="col text-center mb-3">
 <a routerLink ="/registration" class="text-light">Create an account</a>
 </div>
