@@ -1,60 +1,72 @@
 
 
-<form class="my-2 mx-3">
+<form class="my-2 mx-3" [formGroup]="postrideForm" (ngSubmit)="addNewItem()" >
   <div class="shadow brdr3 border-primary py-1 m-3 mx-auto h3 w-50 d-flex justify-content-center text-info">Post your Ride</div>
 	<fieldset class="border-primary p-3 brdr brdr1 m-3 w-100">
     <legend class="shadow w-25 p-2 d-flex justify-content-center my-3 bg-white brdr1 h4">Itinerary</legend>
-		<input type="text" class="brdr shadow p-1 m-1" [(ngModel)]="rideService.serv_source" name="Pick_up" placeholder="Pick-up point">
+    <select class="form-control brdr shadow p-1 w-25" id="src" formControlName="source" placeholder="Pick-up point">
+      <option value="Montreal">Montreal</option>
+    </select>
 		<br>
 		<br>
-		<input type="text" class="brdr shadow p-1 m-1" [(ngModel)]="rideService.serv_destination" name="drop" placeholder="Drop point">
+    <!--<input type="text" class="brdr shadow p-1 m-1" [(ngModel)]="rideService.serv_destination" name="drop" placeholder="Drop point">-->
+    <select class="form-control brdr shadow p-1 w-25" id="dest" formControlName="destination" placeholder="Pick-up point">
+      <option value="Toronto">Toronto</option>
+      <option value="Halifax">Halifax</option>
+      <option value="Brampton">Brampton</option>
+    </select>
 	</fieldset>
 	
   <fieldset class="border-primary p-3 brdr brdr1 m-3 w-100">
     <legend class="shadow w-25 p-2 d-flex justify-content-center my-3 bg-white brdr1 h4">Car Information</legend>
     <label for="model">Car Model : </label>
-    <input type="text" class="brdr shadow pl-4" [(ngModel)]="rideService.serv_carModel" id="model" name="model"><br><br>
+    <input type="text" class="brdr shadow pl-4" id="model" formControlName="model"><br><br>
     <label for="car_num">Car Number :</label>
-    <input type="text" class="brdr shadow pl-4" [(ngModel)]="rideService.serv_carNum" id="car_num" name="car_num"><br><br>
+    <input type="text" class="brdr shadow pl-4" id="car_num" formControlName="car_num"><br><br>
   </fieldset>
   
 <fieldset class="border-primary p-3 brdr brdr1 m-3 w-100">
     <legend class="shadow w-25 p-2 d-flex justify-content-center my-3 bg-white brdr1 h4">Trip Information</legend>
 	<label for="price">Price for trip : </label>
 	<select class="brdr ml-2"><option>CAD</option><option>USD</option><option>INR</option><option>Euro</option></select>
-	<input type="number" class="brdr shadow pl-4 ml-2" [(ngModel)]="rideService.serv_price" id="price" name="price"><br><br>
-	<label for="car_num">Seats available :</label>
-    <input type="number" class="brdr shadow pl-4" [(ngModel)]="rideService.serv_seats" id="seats" name="seats"><br><br>
-    <label for="traveldate">Date of Travel : </label>
-    <input type="date" class="brdr shadow pl-4" [(ngModel)]="rideService.serv_date" id="traveldate" name="traveldate"><br><br>
-    <label for="traveltime">Time of Travel : </label>
-    <input type="time" class="brdr shadow pl-4" [(ngModel)]="rideService.serv_time" id="traveltime" name="traveltime"><br><br>
+	<input type="number" class="brdr shadow pl-4 ml-2" id="price" formControlName="price"><br><br>
+  <label for="car_num">Seats available <b class="text-danger">(*)</b>:
+  <small class="form-text text-danger" 
+                *ngIf="postrideForm.get('seats').invalid && postrideForm.get('seats').touched"> 
+                This field is mandatory</small></label>
+    <input type="number" class="brdr shadow pl-2" id="seats" formControlName="seats"><br><br>
+    
+    <label for="traveldate">Date of Travel <b class="text-danger">(*)</b>: </label>
+    <input type="date" class="brdr shadow pl-4" id="traveldate" formControlName="traveldate"><br><br>
+    <label for="traveltime">Time of Travel <b class="text-danger">(*)</b>: </label>
+    <input type="time" class="brdr shadow pl-4" id="traveltime" formControlName="traveltime"><br><br>
   </fieldset>
   
   <fieldset class="border-primary p-3 brdr brdr1 m-3 w-100">
     <legend class="shadow w-25 p-2 d-flex justify-content-center my-3 bg-white brdr1 h4">Personal Information</legend>
-    <label for="name">Name : </label>
-    <input type="text" class="brdr shadow pl-2" [(ngModel)]="rideService.serv_name" id="name" name="name"><br><br>
-    <label for="ph_num">Phone Number : </label>
-    <input type="text" class="brdr shadow pl-2" [(ngModel)]="rideService.serv_phone" id="ph_num" name="ph_num"><br><br>
+    <label for="name">Name <b class="text-danger">(*)</b>: </label>
+    <input type="text" class="brdr shadow pl-2" id="name" formControlName="name"><br><br>
+    <label for="ph_num">Phone Number <b class="text-danger">(*)</b>: </label>
+    <input type="text" class="brdr shadow pl-2" id="ph_num" formControlName="ph_num"><br><br>
     <label for="email">Email : </label>
-    <input type="email" class="brdr shadow pl-1" [(ngModel)]="rideService.serv_email" id="email" name="email"><br><br>
+    <input type="email" class="brdr shadow pl-1"  id="email" formControlName="email"><br><br>
     <label for="birthday">Date of Birth : </label>
-    <input type="date" class="brdr shadow pl-2" [(ngModel)]="rideService.serv_dob" id="birthday" name="birthday"><br><br>
-	<label for="exp">Driving experience : </label>
-    <input type="number" class="brdr shadow pl-2" [(ngModel)]="rideService.serv_exp" id="exp" name="exp"><br><br>
+    <input type="date" class="brdr shadow pl-2" id="birthday" formControlName="birthday"><br><br>
+	  <label for="exp">Driving experience : </label>
+    <input type="number" class="brdr shadow pl-2" id="exp" formControlName="exp"><br><br>
+    <label for="age">Age : </label>
+    <input type="number" class="brdr shadow pl-2" id="age" formControlName="age"><br><br>
     <div>
       <span>Gender : </span>
       <div class="form-check ml-5">
-        <input class="form-check-input" type="radio" [(ngModel)]="rideService.serv_gender" name="exampleRadios" id="exampleRadios1" value="option1">
+        <input class="form-check-input" type="radio" value="female" formControlName="gender" id="exampleRadios1" value="Male">
         <label class="form-check-label" for="exampleRadios1">Male</label>
         <br>
-        <input class="form-check-input" type="radio" [(ngModel)]="rideService.serv_gender" name="exampleRadios" id="exampleRadios2" value="option2">
+        <input class="form-check-input" type="radio" value="female" formControlName="gender" id="exampleRadios2" value="Female">
               <label class="form-check-label" for="exampleRadios2">Female</label>
              </div>
       </div>
   </fieldset>
-  <button class="bg-primary btn btn-primary brdr2 mx-5 my-3 brdr2 px-3 py-1" (click)="status()" type="submit">Submit</button>
+  <button class="bg-primary btn btn-primary brdr2 mx-5 my-3 brdr2 px-3 py-1" [disabled]="postrideForm.get('seats').invalid" type="submit">Submit</button>
+  
 </form>
-<button *ngIf="submit_val" class="btn btn-primary" routerLink="/secure/trips/new-item">Show newly added item</button>
-
